@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void setArrayElements(int arr[], int size){
+    for(int i=0;i<size;i++){
+        cout<<"arr["<<i+1<<"]=";
+        cin>>arr[i];
+    }
+}
+
+void printArray(int arr[], int size){
+    for(int i=0;i<size;i++){
+        cout<<"arr["<<i+1<<"]="<<arr[i]<<endl;
+    }
+}
+void swap(int arr[],int i, int j){
+    int temp=0;
+    temp=arr[i-1];
+    arr[i-1]=arr[j-1];
+    arr[j-1]=temp;
+}
+int getNumber(){
+    int n;
+    cout<<"eded daxil edin : ";
+    cin>>n;
+    return n;
+}
+int main() {
+    int arr[5];
+    int size=sizeof(arr)/sizeof(int);
+    setArrayElements(arr,size);
+    cout<<"--------------"<<endl;
+    swap(arr,getNumber(),getNumber());
+    printArray(arr,size);
+    return 0;
+}
