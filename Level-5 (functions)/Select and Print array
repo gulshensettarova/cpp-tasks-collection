@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void setArrayElements(int arr[], int size){
+    for(int i=0;i<size;i++){
+        cout<<"arr["<<i+1<<"]=";
+        cin>>arr[i];
+    }
+}
+
+void printArray(int arr[], int size){
+    for(int i=0;i<size;i++){
+        cout<<"arr["<<i+1<<"]="<<arr[i]<<endl;
+    }
+}
+int main() {
+    int arr[3];
+    int size=sizeof(arr)/sizeof(int);
+    setArrayElements(arr,size);
+    cout<<"--------------"<<endl;
+    printArray(arr,size);
+    return 0;
+}
